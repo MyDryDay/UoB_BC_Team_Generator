@@ -23,7 +23,7 @@ describe('returnGit', () => {
 describe('returnJob', () => {
     it('Returns the value associated with the returnJob method, in this case: "Engineer"', () => {
         const jobTest = 'Engineer';
-        const engineerTest = new Engineer('George', 314, 'emailTest', 'MyDryDay');
+        const engineerTest = new Engineer('George', 314, 'emailTest@example.com', 'MyDryDay');
         expect(engineerTest.returnJob()).toBe(jobTest);
     });
 });
