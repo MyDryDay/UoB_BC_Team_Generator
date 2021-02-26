@@ -1,5 +1,7 @@
 const Employee = require('../lib/Employee');
 
+// Tests the functionality of the object constructor / class itself
+// Checks the outputted object for accuracy
 describe('Employee', () => {
     it('Should create a employeeTest object', () => {
         const employeeTest = new Employee();
@@ -31,5 +33,38 @@ describe('Employee', () => {
             id: 314,
             email: 'emailTest@example.com'
         });
+    });
+});
+
+// Employee object method tests
+describe('returnName', () => {
+    it('Returns the value associated with the name key from object', () => {
+        const nameTest = 'George';
+        const employeeTest = new Employee(nameTest);
+        expect(employeeTest.returnName()).toBe(nameTest);
+    });
+});
+
+describe('returnID', () => {
+    it('Returns the value associated with the id key from object', () => {
+        const idTest = '314';
+        const employeeTest = new Employee('George', idTest);
+        expect(employeeTest.returnID()).toBe(idTest);
+    });
+});
+
+describe('returnEmail', () => {
+    it('Returns the value associated with the email key from object', () => {
+        const emailTest = 'emailTest@example.com';
+        const employeeTest = new Employee('George', 314, emailTest);
+        expect(employeeTest.returnEmail()).toBe(emailTest);
+    });
+});
+
+describe('returnJob', () => {
+    it('Returns the value associated with the returnJob method, in this case: "Employee"', () => {
+        const jobTest = 'Employee';
+        const employeeTest = new Employee('George', 314, 'emailTest@example.com');
+        expect(employeeTest.returnJob()).toBe(jobTest);
     });
 });
