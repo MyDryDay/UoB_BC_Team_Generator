@@ -2,6 +2,8 @@
 
   # Description
   A small application that lets a user input information about a team such as names, employee IDs, GitHub usernames etc. and outputs a HTML page displaying each team member's     information.
+  
+  ![Screenshot #1](/img/1.png)
 
   ## Contents
   Section                       | Description
@@ -23,6 +25,8 @@
   2. Type "node index.js" into the CLI.
   3. Follow the on-screen prompts.
   4. All done! Your generated HTML page should be in the "dist" folder in the downloaded / cloned repository.  
+
+  A demo video of the project can be found [here](https://drive.google.com/file/d/1buNzn_uut3EGx4RMdR6jpC7oGbIPZcPu/view?usp=sharing)
 
   ### License ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT) 
  
