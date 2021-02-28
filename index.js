@@ -226,7 +226,7 @@ addEngineer = () => {
             type: 'input',
             name: 'github',
             message: 'Enter the chosen Engineer\'s GitHub username:'
-        }
+        },
     ]).then((name, id, email, github) => {
         let engineer = new Engineer(name, id, email, github);
         employeeArr.push(engineer);
@@ -236,7 +236,33 @@ addEngineer = () => {
 }
 
 addIntern = () => {
-
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Enter the chosen Intern\'s name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter the chosen Intern\'s ID number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter the chosen Intern\'s email address:'
+        },
+        {
+            type: 'input',
+            name: 'school',
+            message: 'Enter the school atttended by the chosen Intern:'
+        },
+    ]).then((name, id, email, school) => {
+        let intern = new Intern(name, id, email, school);
+        employeeArr.push(intern);
+        employeeProfiles(intern);
+        addNew();
+    });
 }
 
 
