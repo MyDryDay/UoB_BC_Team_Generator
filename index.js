@@ -44,88 +44,88 @@ initialHTML = () => {
     });
 }
 
-// employeeProfiles = (obj) => {
-//     return new Promise((resolve, reject) => {
-//         // Assigning varibale names to properties form the obj parameter
-//         const name = obj.returnName();
-//         const id = obj.returnId();
-//         const email = obj.returnEmail();
-//         const role = obj.returnRole();
+employeeProfiles = (obj) => {
+    return new Promise((resolve, reject) => {
+        // Assigning varibale names to properties form the obj parameter
+        const name = obj.returnName();
+        const id = obj.returnId();
+        const email = obj.returnEmail();
+        const role = obj.returnRole();
 
-//         // Initialising an empty string
-//         let profileHTML = '';
-//         if (role === 'Engineer') {
-//             // If Engineer, then a variable has to be assigned to the returnGit method from obj parameter
-//             const github = obj.returnGit();
-//             profileHTML = `
-//             <div class="col d-sm-flex justify-content-center">
-//                 <div class="card border-0 mt-4 shadow-lg">
-//                     <div class="card-header bg-dark text-success border-0">
-//                         <h2 class="card-title">${name}</h2>
-//                         <h3 class="card-title"><i class="fas fa-glasses mr-2 text-white"></i>Engineer</h3>
-//                     </div>
-//                     <div class="card-body bg-dark">
-//                         <ul class="list-group shadow">
-//                             <li class="list-group-item bg-dark text-success">ID: ${id}</li>
-//                             <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
-//                             <li class="list-group-item bg-dark text-success">GitHub: <a href="https://github.com/${github}" target="none">${github}</a></li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>
-//             `;
-//         } else if (role === 'Intern') {
-//             // If Intern, then a variable has to be assigned to the returnSchool method from obj parameter
-//             const school = obj.returnSchool();
-//             profileHTML = `         
-//             <div class="col d-sm-flex justify-content-center">
-//                 <div class="card border-0 mt-4 shadow-lg">
-//                     <div class="card-header bg-dark text-success border-0">
-//                         <h2 class="card-title">${name}</h2>
-//                         <h3 class="card-title"><i class="fas fa-user-graduate mr-2 text-white"></i>Intern</h3>
-//                     </div>
-//                     <div class="card-body bg-dark">
-//                         <ul class="list-group shadow">
-//                             <li class="list-group-item bg-dark text-success">ID: ${id}</li>
-//                             <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
-//                             <li class="list-group-item bg-dark text-success">School: ${school}</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>              
-//             `;
-//         } else if (role === 'Manager') {
-//             // If Manager, then a variable has to be assigned to the returnOffice method from obj parameter
-//             const officeNum = obj.returnOffice();
-//             profileHTML = `
-//             <div class="col d-sm-flex justify-content-center">
-//                 <div class="card border-0 mt-4 shadow-lg rCorners">
-//                     <div class="card-header bg-dark text-success border-0">
-//                         <h2 class="card-title">${name}</h2>
-//                         <h3 class="card-title"><i class="fas fa-mug-hot mr-2 text-white"></i>Manager</h3>
-//                     </div>
-//                     <div class="card-body bg-dark">
-//                         <ul class="list-group shadow">
-//                             <li class="list-group-item bg-dark text-success">ID: ${id}</li>
-//                             <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
-//                             <li class="list-group-item bg-dark text-success">Office Number: ${officeNum}</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//             </div>    
-//             `;
-//         }
-//         console.log("Info added!");
-//         // Before, an HTML was created and had some content written to it
-//         // Here, we append the profileHTML content to the end of the already existing HTML document in the specified directory
-//         fs.appendFile('./dist/index.html', profileHTML, function (error) {
-//             if (error) {
-//                 return reject(error);
-//             };
-//             return resolve();
-//         });
-//     });
-// }
+        // Initialising an empty string
+        let profileHTML = '';
+        if (role === 'Engineer') {
+            // If Engineer, then a variable has to be assigned to the returnGit method from obj parameter
+            const github = obj.returnGit();
+            profileHTML = `
+            <div class="col d-sm-flex justify-content-center">
+                <div class="card border-0 mt-4 shadow-lg">
+                    <div class="card-header bg-dark text-success border-0">
+                        <h2 class="card-title">${name}</h2>
+                        <h3 class="card-title"><i class="fas fa-glasses mr-2 text-white"></i>Engineer</h3>
+                    </div>
+                    <div class="card-body bg-dark">
+                        <ul class="list-group shadow">
+                            <li class="list-group-item bg-dark text-success">ID: ${id}</li>
+                            <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
+                            <li class="list-group-item bg-dark text-success">GitHub: <a href="https://github.com/${github}" target="none">${github}</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            `;
+        } else if (role === 'Intern') {
+            // If Intern, then a variable has to be assigned to the returnSchool method from obj parameter
+            const school = obj.returnSchool();
+            profileHTML = `         
+            <div class="col d-sm-flex justify-content-center">
+                <div class="card border-0 mt-4 shadow-lg">
+                    <div class="card-header bg-dark text-success border-0">
+                        <h2 class="card-title">${name}</h2>
+                        <h3 class="card-title"><i class="fas fa-user-graduate mr-2 text-white"></i>Intern</h3>
+                    </div>
+                    <div class="card-body bg-dark">
+                        <ul class="list-group shadow">
+                            <li class="list-group-item bg-dark text-success">ID: ${id}</li>
+                            <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
+                            <li class="list-group-item bg-dark text-success">School: ${school}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>              
+            `;
+        } else if (role === 'Manager') {
+            // If Manager, then a variable has to be assigned to the returnOffice method from obj parameter
+            const officeNum = obj.returnOffice();
+            profileHTML = `
+            <div class="col d-sm-flex justify-content-center">
+                <div class="card border-0 mt-4 shadow-lg rCorners">
+                    <div class="card-header bg-dark text-success border-0">
+                        <h2 class="card-title">${name}</h2>
+                        <h3 class="card-title"><i class="fas fa-mug-hot mr-2 text-white"></i>Manager</h3>
+                    </div>
+                    <div class="card-body bg-dark">
+                        <ul class="list-group shadow">
+                            <li class="list-group-item bg-dark text-success">ID: ${id}</li>
+                            <li class="list-group-item bg-dark text-success">Email: <a href="mailto:${email}">${email}</a></li>
+                            <li class="list-group-item bg-dark text-success">Office Number: ${officeNum}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>    
+            `;
+        }
+        console.log("Info added!");
+        // Before, an HTML was created and had some content written to it
+        // Here, we append the profileHTML content to the end of the already existing HTML document in the specified directory
+        fs.appendFile('./dist/index.html', profileHTML, function (error) {
+            if (error) {
+                return reject(error);
+            };
+            return resolve();
+        });
+    });
+}
 
 // function htmlFooter() {
 //     const scriptHTML = `
