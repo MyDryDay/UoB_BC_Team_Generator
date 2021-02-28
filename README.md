@@ -2,6 +2,8 @@
 
   # Description
   A small application that lets a user input information about a team such as names, employee IDs, GitHub usernames etc. and outputs a HTML page displaying each team member's     information.
+  
+  ![Screenshot #1](/img/1.png)
 
   ## Contents
   Section                       | Description
