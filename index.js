@@ -127,7 +127,7 @@ employeeProfiles = (obj) => {
     });
 }
 
-function htmlFooter() {
+function htmlScript() {
     const scriptHTML = `
             </div>
         </main>  
@@ -152,6 +152,29 @@ function htmlFooter() {
 }
 
 // // Functions for client input
+addNew = () => {
+    inquirer.prompt([
+        {
+            type: 'list',
+            name: 'addNew',
+            message: 'Who would you like to add next?',
+            choices: [
+                'Engineer', 
+                'Intern', 
+                'I have finished creating the team'
+            ]
+        },
+    ]).then((addNew) => {
+        if(addNew === 'Engineer'){
+            // return addEngineer();
+        } else if(addNew === 'Intern'){
+            // return addIntern();
+        } else{
+            htmlScript();
+        }
+    });
+}
+
 addManager () => {
     inquirer.prompt([
         {
@@ -178,8 +201,8 @@ addManager () => {
         let manager = new Manager(name, id, email, office);
         employeeArr.push(manager);
         employeeProfiles(manager);
-        // addNew function to be called here !!!
-    })
+        addNew();
+    });
 }
 
 addEngineer = () => {
@@ -190,7 +213,5 @@ addIntern = () => {
 
 }
 
-addNew = () => {
 
-}
 
