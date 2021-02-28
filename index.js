@@ -49,7 +49,7 @@ employeeProfiles = (obj) => {
     return new Promise((resolve, reject) => {
         // Assigning varibale names to properties form the obj parameter
         const name = obj.returnName();
-        const id = obj.returnId();
+        const id = obj.returnID();
         const email = obj.returnEmail();
         const role = obj.returnRole();
 
