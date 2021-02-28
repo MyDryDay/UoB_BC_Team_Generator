@@ -51,7 +51,7 @@ employeeProfiles = (obj) => {
         const name = obj.returnName();
         const id = obj.returnID();
         const email = obj.returnEmail();
-        const role = obj.returnRole();
+        const role = obj.returnJob();
 
         // Initialising an empty string
         let profileHTML = '';
