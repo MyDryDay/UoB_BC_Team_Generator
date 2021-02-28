@@ -206,7 +206,33 @@ addManager () => {
 }
 
 addEngineer = () => {
-
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Enter the chosen Engineer\'s name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter the chosen Engineer\'s ID number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter the chosen Engineer\'s email address:'
+        },
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter the chosen Engineer\'s GitHub username:'
+        }
+    ]).then((name, id, email, github) => {
+        let engineer = new Engineer(name, id, email, github);
+        employeeArr.push(engineer);
+        employeeProfiles(engineer);
+        addNew();
+    });
 }
 
 addIntern = () => {
