@@ -152,3 +152,19 @@ function htmlFooter() {
 }
 
 // // Functions for client input
+addManager () => {
+
+}
+
+addEngineer = () => {
+
+}
+
+addIntern = () => {
+
+}
+
+addNew = () => {
+    
+}
+
