@@ -153,7 +153,33 @@ function htmlFooter() {
 
 // // Functions for client input
 addManager () => {
-
+    inquirer.prompt([
+        {
+            type: 'input',
+            name: 'name',
+            message: 'Enter the Team Manager\'s name:'
+        },
+        {
+            type: 'input',
+            name: 'id',
+            message: 'Enter the Team Manager\'s ID number:'
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'Enter the Team Manager\'s email address:'
+        },
+        {
+            type: 'input',
+            name: 'office',
+            message: 'Enter the Team Manager\'s office number:'
+        },
+    ]).then((name, id, email, office) => {
+        let manager = new Manager(name, id, email, office);
+        employeeArr.push(manager);
+        employeeProfiles(manager);
+        // addNew function to be called here !!!
+    })
 }
 
 addEngineer = () => {
@@ -165,6 +191,6 @@ addIntern = () => {
 }
 
 addNew = () => {
-    
+
 }
 
