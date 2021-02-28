@@ -9,13 +9,13 @@ const Intern = require('./lib/Intern');
 const employeeArr = [];
 
 // // Function to initialise the app
-init = () => {
+function init(){
     initialHTML();
     addManager();
 }
 
 // Functions to generate HTML
-initialHTML = () => {
+function initialHTML(){
     const content = `
     <!doctype html>
     <html lang="en">
@@ -38,15 +38,15 @@ initialHTML = () => {
         `;
 
     // Here, an HTML file is created in the specified location with the above content
-    fs.writeFile('./dist/index.html', content, (error) => {
+    fs.writeFile('./dist/index.html', content, function (error){
         if (error) {
             console.log(error);
         }
     });
 }
 
-employeeProfiles = (obj) => {
-    return new Promise((resolve, reject) => {
+function employeeProfiles(obj){
+    return new Promise(function (resolve, reject){
         // Assigning varibale names to properties form the obj parameter
         const name = obj.returnName();
         const id = obj.returnID();
@@ -119,7 +119,7 @@ employeeProfiles = (obj) => {
         console.log("Info added!");
         // Before, an HTML was created and had some content written to it
         // Here, we append the profileHTML content to the end of the already existing HTML document in the specified directory
-        fs.appendFile('./dist/index.html', profileHTML, function (error) {
+        fs.appendFile('./dist/index.html', profileHTML, function (error){
             if (error) {
                 return reject(error);
             };
@@ -144,7 +144,7 @@ function htmlScript() {
     </html>
     `;
 
-    fs.appendFile("./dist/index.html", scriptHTML, function (error) {
+    fs.appendFile("./dist/index.html", scriptHTML, function (error){
         if (error) {
             console.log(error);
         };
@@ -153,7 +153,7 @@ function htmlScript() {
 }
 
 // // Functions for client input
-addNew = () => {
+function addNew(){
     inquirer.prompt([
         {
             type: 'list',
@@ -165,7 +165,7 @@ addNew = () => {
                 'I have finished creating the team'
             ]
         },
-    ]).then((addNew) => {
+    ]).then(function ({addNew}){
         if(addNew === 'Engineer'){
             return addEngineer();
         } else if(addNew === 'Intern'){
@@ -176,7 +176,7 @@ addNew = () => {
     });
 }
 
-addManager = () => {
+function addManager(){
     inquirer.prompt([
         {
             type: 'input',
@@ -198,7 +198,7 @@ addManager = () => {
             name: 'office',
             message: 'Enter the Team Manager\'s office number:'
         },
-    ]).then((name, id, email, office) => {
+    ]).then(function ({name, id, email, office}){
         let manager = new Manager(name, id, email, office);
         employeeArr.push(manager);
         employeeProfiles(manager);
@@ -207,7 +207,7 @@ addManager = () => {
 }
 
 
-addEngineer = () => {
+function addEngineer(){
     inquirer.prompt([
         {
             type: 'input',
@@ -229,7 +229,7 @@ addEngineer = () => {
             name: 'github',
             message: 'Enter the chosen Engineer\'s GitHub username:'
         },
-    ]).then((name, id, email, github) => {
+    ]).then(function ({name, id, email, github}){
         let engineer = new Engineer(name, id, email, github);
         employeeArr.push(engineer);
         employeeProfiles(engineer);
@@ -237,7 +237,7 @@ addEngineer = () => {
     });
 }
 
-addIntern = () => {
+function addIntern(){
     inquirer.prompt([
         {
             type: 'input',
@@ -259,7 +259,7 @@ addIntern = () => {
             name: 'school',
             message: 'Enter the school atttended by the chosen Intern:'
         },
-    ]).then((name, id, email, school) => {
+    ]).then(function ({name, id, email, school}){
         let intern = new Intern(name, id, email, school);
         employeeArr.push(intern);
         employeeProfiles(intern);
