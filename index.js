@@ -167,9 +167,9 @@ addNew = () => {
         },
     ]).then((addNew) => {
         if(addNew === 'Engineer'){
-            // return addEngineer();
+            return addEngineer();
         } else if(addNew === 'Intern'){
-            // return addIntern();
+            return addIntern();
         } else{
             htmlScript();
         }
