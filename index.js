@@ -95,7 +95,7 @@ function employeeProfiles(obj){
                 </div>
             </div>              
             `;
-        } else if (role === 'Manager') {
+        } else{
             // If Manager, then a variable has to be assigned to the returnOffice method from obj parameter
             const officeNum = obj.returnOffice();
             profileHTML = `
