@@ -100,7 +100,7 @@ function employeeProfiles(obj){
             const officeNum = obj.returnOffice();
             profileHTML = `
             <div class="col d-sm-flex justify-content-center">
-                <div class="card border-0 mt-4 shadow-lg rCorners">
+                <div class="card border-0 mt-4 shadow-lg">
                     <div class="card-header bg-dark text-success border-0">
                         <h2 class="card-title">${name}</h2>
                         <h3 class="card-title"><i class="fas fa-mug-hot mr-2 text-white"></i>Manager</h3>
