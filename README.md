@@ -24,6 +24,8 @@
   3. Follow the on-screen prompts.
   4. All done! Your generated HTML page should be in the "dist" folder in the downloaded / cloned repository.  
 
+  A demo video of the project can be found [here](https://drive.google.com/file/d/1buNzn_uut3EGx4RMdR6jpC7oGbIPZcPu/view?usp=sharing)
+
   ### License ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)(https://opensource.org/licenses/MIT) 
  
 Project created using the MIT license.
