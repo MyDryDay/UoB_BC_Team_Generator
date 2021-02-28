@@ -26,7 +26,7 @@ function initialHTML(){
                 integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
             <title>Team Information</title>
         </head>  
-        <body>
+        <body class="bg-secondary">
 
             <section class="jumbotron jumbotron-fluid bg-dark text-success text-center shadow-lg">
             <div class="container">
