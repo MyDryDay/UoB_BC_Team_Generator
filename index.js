@@ -13,36 +13,36 @@ const employeeArr = [];
 
 // }
 
-// // Functions to generate HTML
-// initialHTML = () => {
-//     const content = `
-//     <!doctype html>
-//     <html lang="en">
-//         <head>
-//             <meta charset="utf-8">
-//             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-//             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-//                 integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-//             <title>Team Information</title>
-//         </head>  
-//         <body>
+// Functions to generate HTML
+initialHTML = () => {
+    const content = `
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+                integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+            <title>Team Information</title>
+        </head>  
+        <body>
 
-//             <section class="jumbotron jumbotron-fluid bg-dark text-success text-center shadow-lg">
-//             <div class="container">
-//                 <h1>Meet the team!</h1>
-//             </div>
-//         </section>
-//         <main class="container">
-//             <div class="row">
-//         `;
+            <section class="jumbotron jumbotron-fluid bg-dark text-success text-center shadow-lg">
+            <div class="container">
+                <h1>Meet the team!</h1>
+            </div>
+        </section>
+        <main class="container">
+            <div class="row">
+        `;
 
-//     // Here, an HTML file is created in the specified location with the above content
-//     fs.writeFile('./dist/index.html', content, (error) => {
-//         if (error) {
-//             console.log(error);
-//         }
-//     });
-// }
+    // Here, an HTML file is created in the specified location with the above content
+    fs.writeFile('./dist/index.html', content, (error) => {
+        if (error) {
+            console.log(error);
+        }
+    });
+}
 
 // employeeProfiles = (obj) => {
 //     return new Promise((resolve, reject) => {
