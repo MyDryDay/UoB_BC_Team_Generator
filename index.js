@@ -9,9 +9,10 @@ const Intern = require('./lib/Intern');
 const employeeArr = [];
 
 // // Function to initialise the app
-// init = () => {
-
-// }
+init = () => {
+    initialHTML();
+    addManager();
+}
 
 // Functions to generate HTML
 initialHTML = () => {
@@ -175,7 +176,7 @@ addNew = () => {
     });
 }
 
-addManager () => {
+addManager = () => {
     inquirer.prompt([
         {
             type: 'input',
@@ -204,6 +205,7 @@ addManager () => {
         addNew();
     });
 }
+
 
 addEngineer = () => {
     inquirer.prompt([
@@ -266,4 +268,4 @@ addIntern = () => {
 }
 
 
-
+init();
