@@ -39,7 +39,7 @@ Project created using the MIT license.
   3. Done! The tests should all pass. 
 
   #### Questions
-  Should you have any questions, please don't hesitate to contact me via:
+  Should you have any questions, please don't hesitate to contact me via:  
   GitHub: https://github.com/MyDryDay  
   LinkedIn: https://www.linkedin.com/in/george-cope-633b761bb/  
   Telegram: https://t.me/G_Cope97
